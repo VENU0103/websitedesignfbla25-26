@@ -1,0 +1,32 @@
+#content-page-title {
+    text-align: center;
+}
+
+.content_page_heading {
+	height: 45px;
+	width: 100%;
+	background-color: #5bfc99;
+}
+
+.content_page_heading a{
+	float: left;
+	font-size: 16px;
+	color:black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.container {
+    display: flex;
+ 	width: 100%;
+}
+
+.itemLeft {
+   	flex: 40%;
+}
+
+.itemRight {
+	flex: 60;
+}
