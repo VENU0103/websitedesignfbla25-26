@@ -1,0 +1,77 @@
+#content-page-title {
+    text-align: center;
+}
+
+.content_page_heading {
+	height: 45px;
+	width: 100%;
+	background-color: #5bfc99;
+}
+
+.content_page_heading a{
+	float: left;
+	font-size: 16px;
+	color:black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.container {
+    display: flex;
+ 	width: 100%;
+}
+
+.itemLeft {
+   	flex: 50%;
+}
+
+.itemRight {
+	margin-left: 25%;
+	flex: 50%;
+}
+
+#hours-table {
+    table {
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+        border-collapse: collapse;
+    }
+
+    th,td {
+        height: 30px;
+        border:1px solid rgb(0, 0, 0);
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+}
+
+#about-mint-museum-text {
+	font-size: 20px;
+}
+
+#calendar-table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+		height: 80px;
+		width: 80px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+		vertical-align: top;
+    }
+    th {
+        background-color: #f0f0f0;
+		text-align: left;
+		vertical-align: middle;
+    }
+}
