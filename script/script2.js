@@ -27,7 +27,54 @@ function isInViewport(element) {
   // Attach the handleScroll function to the scroll event
 window.addEventListener('scroll', handleScroll);
 
-// Initial check on page load
+// Key for storing the scroll position in session storage
+  const SCROLL_POS_KEY = 'scrollPosition';
+  // Key for tracking the previous tab/window context
+  const PREV_CONTEXT_KEY = 'prevContext';
+
+  // --- Function to save the current scroll position ---
+  function saveScrollPosition() {
+    // Check if the user is leaving the page via navigation (not just refreshing)
+    if (document.visibilityState === 'hidden') {
+      sessionStorage.setItem(SCROLL_POS_KEY, window.scrollY);
+      sessionStorage.setItem(PREV_CONTEXT_KEY, 'navigated');
+    } else {
+      // If it's just a refresh in the same tab, mark it as such
+      sessionStorage.setItem(PREV_CONTEXT_KEY, 'refreshed');
+    }
+  }
+
+  // --- Function to restore or clear the scroll position ---
+  function restoreOrClearScrollPosition() {
+    const previousContext = sessionStorage.getItem(PREV_CONTEXT_KEY);
+    
+    if (previousContext === 'refreshed') {
+      // Case 1: Restoring on refresh in the same tab
+      const storedScrollY = sessionStorage.getItem(SCROLL_POS_KEY);
+      if (storedScrollY !== null) {
+        // Use a slight delay to ensure the DOM is fully painted before scrolling
+        window.setTimeout(() => {
+          window.scrollTo(0, parseInt(storedScrollY, 10));
+        }, 100); 
+      }
+    } else {
+      // Case 2: User arrived from a different tab/window (previousContext === 'navigated' or null)
+      // Clear storage and scroll to top (default browser behavior)
+      sessionStorage.removeItem(SCROLL_POS_KEY);
+      sessionStorage.removeItem(PREV_CONTEXT_KEY);
+      // Explicitly scroll to the top just in case
+      window.scrollTo(0, 0); 
+    }
+  }
+
+  // --- Event Listeners ---
+  
+  // Save position when the page is about to unload or hide (before refresh or navigation)
+  // Use the Page Visibility API for better detection
+  document.addEventListener('visibilitychange', saveScrollPosition);
+  
+  // Restore position when the page loads
+  window.addEventListener('load', restoreOrClearScrollPosition)
 
 // Store all pages
 const pages = {
