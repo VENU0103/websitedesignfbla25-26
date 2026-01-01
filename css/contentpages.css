@@ -85,14 +85,14 @@ a{
 .itemLeft {
     margin-left: 15px;
    	flex: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .itemRight {
 	margin-left: 25%;
     margin-right: 15px;
 	flex: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     align-self: center;
 }
 
