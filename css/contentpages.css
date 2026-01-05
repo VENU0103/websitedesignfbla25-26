@@ -148,6 +148,9 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .section {
@@ -189,83 +192,12 @@ body {
 	transition: opacity 0.5s, transform 0.5s;
 }
 
-/* Only apply these fixes on devices smaller than 1024px */
-@media (max-width: 1023px) {
-  
-  /* Box sizing for predictable layouts */
-  * {
-    box-sizing: border-box;
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
   
-  /* Prevent horizontal scrolling */
-  html {
-    width: 100%;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-  
-  /* Make images responsive */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Make videos and iframes responsive */
-  video,
-  iframe {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Prevent tables from overflowing */
-  table {
-    max-width: 100%;
-    overflow-x: auto;
-    display: block;
-  }
-  
-  /* Prevent long words from breaking layout */
-  p,
-  h1, h2, h3, h4, h5, h6,
-  div,
-  span {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  
-  /* Make form inputs fit within containers */
-  input,
-  textarea,
-  select {
-    max-width: 100%;
-  }
-  
-  /* iOS Safari specific fixes */
-  html {
-    height: -webkit-fill-available;
-  }
-  
-  body {
-    min-height: -webkit-fill-available;
-  }
-}
-
-/* Additional fixes for very small mobile devices */
-@media (max-width: 767px) {
-  
-  /* Ensure nothing causes horizontal scroll */
-  * {
-    max-width: 100%;
-  }
-  
-  /* But allow body and html to be full width */
-  html,
-  body {
-    max-width: none;
+  .card {
+    flex: 1 1 100%;
   }
 }
