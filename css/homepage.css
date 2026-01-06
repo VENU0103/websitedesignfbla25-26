@@ -70,7 +70,7 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    display: flex;
+    
     flex-direction: column;
     min-height: 100vh;
 }
@@ -81,12 +81,40 @@ body {
 	transition: opacity 0.5s, transform 0.5s;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+
+/* Make entire page scale proportionally */
+
+body {
+  zoom: 1;
+  transform-origin: top left;
+}
+
+@media only screen and (max-width: 1400px) {
+  body {
+    zoom: 0.85;
   }
-  
-  .card {
-    flex: 1 1 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    zoom: 0.7;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    zoom: 0.6;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    zoom: 0.5;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    zoom: 0.4;
   }
 }
