@@ -81,46 +81,30 @@ body {
 	transition: opacity 1s, transform 1s;
 }
 
-
-/* Make entire page scale proportionally */
-
-body {
-  zoom: 1;
-  transform-origin: top left;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1400px) {
-  body {
-    zoom: 0.85;
+#scale-wrapper {
+  width: 1920px;
+  transform-origin: 0 0;
+}
+
+@media screen and (max-width: 1920px) {
+  #scale-wrapper {
+    transform: scale(calc(100vw / 1920));
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  body {
-    zoom: 0.7;
-  }
+/* Force full width elements */
+#main-title {
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1000px) {
-  body {
-    zoom: 0.6;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  body {
-    zoom: 0.5;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    zoom: 0.4;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  body {
-    zoom: 0.3;
-  }
+.main_heading {
+  width: 100% !important;
 }
