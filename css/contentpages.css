@@ -189,7 +189,7 @@ body {
 .animated-element {
 	opacity: 100;
 	transform: translateY(000px);
-	transition: opacity 0.5s, transform 0.5s;
+	transition: opacity 1s, transform 1s;
 }
 
 /* Make entire page scale proportionally */
@@ -226,5 +226,11 @@ body {
 @media only screen and (max-width: 600px) {
   body {
     zoom: 0.4;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    zoom: 0.3;
   }
 }
