@@ -7,7 +7,8 @@
     padding-bottom: 8.5%;
     padding-left: 4.5%;
     background-color: #a9f1d9;
-	width: 95.5% ;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .main_heading {
@@ -16,6 +17,7 @@
     padding-bottom:2%;
     padding-top:2%;
     z-index: 1;
+	width: 100%;
 }
 
 .sticky {
@@ -65,53 +67,24 @@
     color: white;
 }
 
+html, body {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
-    margin: 0;
-    padding: 0;
-    
     flex-direction: column;
     min-height: 100vh;
+	min-width: 1200px;
 }
 
 .animated-element {
 	opacity: 100;
 	transform: translateY(000px);
 	transition: opacity 1s, transform 1s;
-}
-
-/* Scale without wrapper - apply to body */
-
-html {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  width: 1920px;
-  transform-origin: top left;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-@media screen and (max-width: 1920px) {
-  body {
-    transform: scale(calc(100vw / 1920));
-  }
-}
-
-/* Ensure all top-level elements are 1920px */
-.content_page_heading {
-  width: 1920px;
-}
-
-#content-page-title {
-  width: 1920px;
-  padding-left: 4.5%;
-  box-sizing: border-box;
 }
