@@ -81,30 +81,37 @@ body {
 	transition: opacity 1s, transform 1s;
 }
 
-html, body {
+/* Scale without wrapper - apply to body */
+
+html {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow-x: hidden;
 }
 
-#scale-wrapper {
+body {
   width: 1920px;
-  transform-origin: 0 0;
+  transform-origin: top left;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 1920px) {
-  #scale-wrapper {
+  body {
     transform: scale(calc(100vw / 1920));
   }
 }
 
-/* Force full width elements */
-#main-title {
-  width: 100% !important;
-  box-sizing: border-box;
+/* Ensure all top-level elements are 1920px */
+.content_page_heading {
+  width: 1920px;
 }
 
-.main_heading {
-  width: 100% !important;
+#content-page-title {
+  width: 1920px;
+  padding-left: 4.5%;
+  box-sizing: border-box;
 }
