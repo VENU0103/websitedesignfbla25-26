@@ -2,28 +2,25 @@
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom > 0
     );
-  }
-  
-  // Function to handle scroll events
-  function handleScroll() {
+}
+
+// Function to handle scroll events
+function handleScroll() {
     const animatedElements = document.querySelectorAll('.animated-element');
   
     animatedElements.forEach(element => {
       if (isInViewport(element)) {
         element.style.opacity = 1;
-        element.style.transform = 'translateY(10px)';
+        element.style.transform = 'translateY(0px)';
       } else {
-        // Reset the animation properties if the element is not in the viewport
         element.style.opacity = 0;
-        element.style.transform = 'translateY(10px)';
+        element.style.transform = 'translateY(20px)';
       }
     });
-  }
+}
   // Attach the handleScroll function to the scroll event
 window.addEventListener('scroll', handleScroll);
 
@@ -345,4 +342,25 @@ if (pages[id]) {
     document.getElementById('text').textContent = "";
 }
 
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navMenu = document.getElementById('navMenu');
+
+if (hamburgerBtn && navMenu) {
+  hamburgerBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.button a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+}
+
+// Attach the handleScroll function to the scroll event
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('resize', handleScroll);
+
+// Call on page load
 handleScroll();
