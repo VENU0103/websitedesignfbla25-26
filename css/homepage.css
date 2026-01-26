@@ -8,8 +8,11 @@
     padding-bottom: 8.5%;
     padding-left: 4.5%;
     background-color: #a9f1d9;
-	width: 100%;
-	box-sizing: border-box;margin-top: 50px;
+	box-sizing: border-box;
+    margin-top: 50px;
+    position: sticky;
+    left: 0;
+    width: 100vw;
 }
 
 .main_heading {
@@ -79,6 +82,7 @@ html, body {
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
+    height: 100%;
 }
 
 body {
@@ -121,10 +125,14 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
-    .gallery {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 20px;
+@media (max-width: 1400px) and (min-width: 901px) {
+    #main-title {
+        font-size: 4.5em;
+        justify-content: center;
+    }
+
+    #main-title br {
+        display: none;
     }
 }
 
@@ -145,27 +153,76 @@ body {
         white-space: normal;
         word-break: normal;
         text-align: left; /* optional */
+        font-size: 4.5em;
+        margin-top: 60px;
+    }
+}
+
+.animated-element {
+	opacity: 100;
+	transform: translateY(000px);
+	transition: opacity 1s, transform 1s;
+}
+
+.parallax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax-text {
+    float: left;
+    color: white;
+    font-size: 6em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#parallax-text-2 {
+    float: left;
+    color: white;
+    font-size: 1em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+@media (max-width: 900px) {
+    #parallax-text {
+        font-size: 4em;
     }
 
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 20px;
+    #parallax-text-2 {
+        font-size: 0.9em;
     }
 }
 
 @media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 50px;
+    #main-title {
+        font-size: 3em;
     }
 
-    #main-title {
-        font-size: 4.5em;
+    #parallax-text {
+        font-size: 2.5em;
+    }
+
+    #parallax-text-2 {
+        font-size: 0.8em;
     }
 }
 
 @media (max-width: 550px) {
     #main-title {
-        padding-top: 40%;
+        padding-top: 35%;
+    }
+
+    #parallax-text {
+        font-size: 3em;
+    }
+
+    #parallax-text-2 {
+        font-size: 0.7em;
     }
 }
