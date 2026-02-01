@@ -2,26 +2,60 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="css/homepage.css">
-        <script src="script/script.js" defer></script>
-        <title>The Mint Museum</title>
-        <link href="images/logo.png" rel="icon" type="image/jpeg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script/script.js" defer></script>
+        <title>About the Mint Museum</title>
+        <link href="images/logo.png" rel="icon" type="image/jpeg">
     </head>
 
     <body>
         <button class="hamburger" onclick="toggleMenu()">☰</button><br>
         <ul class="main_heading sticky">
-            <li class="button selected" onclick="window.location.href='index.html'"><a href="index.html">Home Page</a></li>
-            <li class="button" onclick="window.location.href='about_mint_museum.html'"><a href="about_mint_museum.html">About the Mint Museum</a></li>
-            <li class="button" onclick="window.location.href='visitor_information.html'"><a href="visitor_information.html">Visitor Information</a></li>
-            <li class="button" onclick="window.location.href='exhibitions.html'"><a href="exhibitions.html">Exhibitions</a></li>
-            <li class="button" onclick="window.location.href='calendar.html'"><a href="calendar.html">Calendar</a></li>
-            <li class="button" onclick="window.location.href='featured_artists_and_artifacts.html'"><a href="featured_artists_and_artifacts.html">Featured Artists and Artifacts</a></li>
+            <li class="button selected" onclick="window.location.href='index.html'" style="cursor: pointer;"><a href="index.html">Home Page</a></li>
+            <li class="button" onclick="window.location.href='about_mint_museum.html'" style="cursor: pointer;"><a href="about_mint_museum.html">About the Mint Museum</a></li>
+            <li class="button" onclick="window.location.href='visitor_information.html'" style="cursor: pointer;"><a href="visitor_information.html">Visitor Information</a></li>
+            <li class="button" onclick="window.location.href='exhibitions.html'" style="cursor: pointer;"><a href="exhibitions.html">Exhibitions</a></li>
+            <li class="button" onclick="window.location.href='calendar.html'" style="cursor: pointer;"><a href="calendar.html">Calendar</a></li>
+            <li class="button" onclick="window.location.href='featured_artists_and_artifacts.html'" style="cursor: pointer;"><a href="featured_artists_and_artifacts.html">Featured Artists and Artifacts</a></li>
         </ul>
         <h1 id="main-title">The Mint Museum</h1>
-        <div class="parallax" style="background-image: url('images/mintuptown.avif'); height: 60%">
+        <div class="parallax" style="background-image: url('images/mintuptown.avif'); height: 60vh;">
             <p id="parallax-text-2">NORTH CAROLINA'S FIRST ART MUSEUM</p>
             <h1 id="parallax-text">Bringing Masterpieces for Everyone</h1>
+        </div><br><br><br><br>
+        <h2 class="animated-element" style="font-size: 3em; text-align: center;">Most Popular Exhibitons</h2>
+        <div class="section">
+            <div class="gallery">
+                <div class="item animated-element"><a href="exhibitionsdescription.html?id=7"><img src="https://www.mintmuseum.org/wp-content/uploads/2022/05/2010.70-jpg-1000x665.webp" alt="Craft in the Laboratory: The Science of Making Things" id="hover"></a>
+                    <p>Craft in the Laboratory: The Science of Making Things</p>
+                </div>
+                <div class="item animated-element"><a href="exhibitionsdescription.html?id=17"><img src="https://www.mintmuseum.org/wp-content/uploads/2025/02/SummerWheat_sun-2-2-1000x763.jpg" alt="Modern + Contemporary"></a>
+                    <p>Modern + Contemporary</p>
+                </div>
+                <div class="item animated-element"><a href="exhibitionsdescription.html?id=18"><img src="https://www.mintmuseum.org/wp-content/uploads/2025/02/1966.54_o3.jpg" alt="European Art"></a>
+                    <p>European Art</p>
+                </div>
+                <div class="item animated-element"><a href="exhibitionsdescription.html?id=22"><img src="https://www.mintmuseum.org/wp-content/uploads/2025/02/1979.287.7_o3-1-1-1000x563.jpg" alt="Art of the Ancient Americas"></a>
+                    <p>Art of the Ancient Americas</p>
+                </div>
+            </div>
+        </div><br><br><br><br>
+        <h2 class="animated-element" style="font-size: 3em; text-align: center;">Top-Rated Artists and Artifacts</h2>
+        <div class="section">
+            <div class="gallery">
+                <div class="item animated-element"><a href="faadescription.html?id=5"><img src="images/husbandryaided.png" alt="Husbandry Aided by Arts and Commerce" id="hover"></a>
+                    <p>Husbandry Aided by Arts and Commerce - Benjamin West</p>
+                </div>
+                <div class="item animated-element"><a href="faadescription.html?id=8"><img src="images/carnivalscene.png" alt="Carnival Scene - George Benjamin Luks"></a>
+                    <p>Carnival Scene - George Benjamin Luks</p>
+                </div>
+                <div class="item animated-element"><a href="faadescription.html?id=17"><img src="images/bluechandelier.png" alt="Royal Blue Mint Chandelier - Dale P. Chihuly"></a>
+                    <p>Royal Blue Mint Chandelier - Dale P. Chihuly</p>
+                </div>
+                <div class="item animated-element"><a href="faadescription.html?id=31"><img src="images/carolinashout.png" alt="Of the Blues: Carolina Shout - Romare H. Bearden"></a>
+                    <p>Of the Blues: Carolina Shout - Romare H. Bearden</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
