@@ -22,6 +22,20 @@
     font-size: 30px;
 }
 
+html, body {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    min-width: 0;
+}
+
 @media (min-width: 1350px) {
     .container {
         flex-direction: row;
