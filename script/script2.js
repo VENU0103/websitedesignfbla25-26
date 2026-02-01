@@ -2,28 +2,25 @@
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom > 0
     );
-  }
-  
-  // Function to handle scroll events
-  function handleScroll() {
+}
+
+// Function to handle scroll events
+function handleScroll() {
     const animatedElements = document.querySelectorAll('.animated-element');
   
     animatedElements.forEach(element => {
       if (isInViewport(element)) {
         element.style.opacity = 1;
-        element.style.transform = 'translateY(10px)';
+        element.style.transform = 'translateY(0px)';
       } else {
-        // Reset the animation properties if the element is not in the viewport
         element.style.opacity = 0;
-        element.style.transform = 'translateY(10px)';
+        element.style.transform = 'translateY(20px)';
       }
     });
-  }
+}
   // Attach the handleScroll function to the scroll event
 window.addEventListener('scroll', handleScroll);
 
@@ -193,6 +190,16 @@ const pages = {
     image: "https://www.mintmuseum.org/wp-content/uploads/2025/02/Arts-of-africa-gallery-1000x563.jpg",
     text: "The Mint Museum’s African Art collection includes a diverse range of sculptures, textiles, clothing, and decorative objects that highlight the historical and religious variety found across the continent. The collection is organized around three primary themes: Global Connections, Personal and Domestic Objects, and Ceremonial Masquerade. These thematic areas are designed to intersect, demonstrating how a single object can serve multiple roles in society, from a functional household item to a centerpiece of a ceremonial performance. By showcasing a variety of styles and materials produced since the late 19th century, the exhibition helps visitors understand the cultural significance and artistic innovation inherent in African craftsmanship."
   },
+  24: {
+    title: "Designing Dynamism: Kuba Textiles from the Dr Congo, The Wesley Mancini Collection",
+    image: "images/drcongotextiles.png",
+    text: "Designing Dynamism explores the bold artistry of Kuba prestige textiles, tracing their journey from sacred ceremonial objects in the Democratic Republic of Congo to their prominent role in the global art world. The show highlights the intricate craftsmanship of raffia squares, which are traditionally woven by men and then meticulously embroidered or finished with velvet-like cut pile by women. These works hold deep spiritual and social weight, having influenced modern masters like Henri Matisse and Sonia Delaunay since they first arrived in Europe over a century ago. Drawn from the significant private collection of Charlotte-based designer Wesley Mancini, the display is set within a contemporary environment envisioned by the acclaimed studio Stephen Burks Man Made. By pairing historical craftsmanship with modern design and film, the exhibition celebrates the persistent power and evolving legacy of the Kuba aesthetic."
+  },
+  25: {
+    title: "Caravaggio | Revolution: Baroque Masterpieces from the Roberto Longhi Foundation",
+    image: "images/caravaggio.png",
+    text: "The exhibition centers on Caravaggio’s hauntingly visceral Boy Bitten by a Lizard, a masterpiece that anchors a collection of over 30 works by his European followers, the Caravaggisti. By showcasing how these Baroque painters adopted his signature blend of gritty realism and dramatic chiaroscuro, the gallery illustrates a seismic shift in art history. This was a movement away from polished perfection toward raw, emotional intensity. More than just a historical survey, the display bridges the gap between the 17th century and the modern era, revealing Caravaggio’s enduring fingerprints on today's visual culture. By pairing classical canvases with the cinematic flair of Martin Scorsese and the moody aesthetics of iconic music videos like R.E.M.’s “Losing My Religion,” the exhibition proves that Caravaggio’s revolutionary way of seeing light and shadow remains the blueprint for how we tell powerful stories on screen today."
+  }
  };
 
 // Get the ID from the URL
@@ -208,6 +215,15 @@ if (pages[id]) {
 } else {
     document.getElementById('title').textContent = "Page not found";
     document.getElementById('text').textContent = "";
+}
+
+// Attach the handleScroll function to the scroll event
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('resize', handleScroll);
+
+function toggleMenu() {
+    document.querySelector('.main_heading')?.classList.toggle('show');
+    document.querySelector('.content_page_heading')?.classList.toggle('show');
 }
 
 handleScroll();
