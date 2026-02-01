@@ -342,25 +342,14 @@ if (pages[id]) {
     document.getElementById('text').textContent = "";
 }
 
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const navMenu = document.getElementById('navMenu');
-
-if (hamburgerBtn && navMenu) {
-  hamburgerBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  // Close menu when a link is clicked
-  document.querySelectorAll('.button a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
-  });
-}
-
 // Attach the handleScroll function to the scroll event
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleScroll);
+
+function toggleMenu() {
+    document.querySelector('.main_heading')?.classList.toggle('show');
+    document.querySelector('.content_page_heading')?.classList.toggle('show');
+}
 
 // Call on page load
 handleScroll();
