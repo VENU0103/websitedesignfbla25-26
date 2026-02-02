@@ -241,14 +241,14 @@ body {
     width: 100vw;
 }
 
-#parallax-text {
+#img-text {
     float: left;
     color: white;
     font-size: 6em;
     text-shadow: 2px 2px 4px #000000;
 }
 
-#parallax-text-2 {
+#img-text-2 {
     float: left;
     color: white;
     font-size: 1em;
@@ -269,11 +269,11 @@ body {
 
 
 @media (max-width: 1500px) {
-    #parallax-text {
+    #img-text {
         font-size: 4em;
     }
 
-    #parallax-text-2 {
+    #img-text-2 {
         font-size: 0.9em;
     }
 }
@@ -283,11 +283,11 @@ body {
         font-size: 3em;
     }
 
-    #parallax-text {
+    #img-text {
         font-size: 2.5em;
     }
 
-    #parallax-text-2 {
+    #img-text-2 {
         font-size: 0.8em;
     }
 
@@ -297,7 +297,7 @@ body {
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 540px) {
     .main_heading {
         display: none;
         flex-direction: column;
@@ -322,11 +322,17 @@ body {
         padding-top: 0;
     }
 
-    #parallax-text {
+    .parallax {
+        background-attachment: scroll;
+        min-height: auto;
+        height: auto;
+    }
+
+    #img-text {
         font-size: 3em;
     }
 
-    #parallax-text-2 {
+    #img-text-2 {
         font-size: 0.7em;
     }
 
@@ -335,52 +341,62 @@ body {
     }
 }
 
-@media (max-width: 450px) {
-    #parallax-text {
-        font-size: 2em;
+@media (max-width: 480px) {
+    #img-text {
+        font-size: 2.3em;
     }
 
-    #parallax-text-2 {
-        font-size: 0.5em;
+    #img-text-2 {
+        font-size: 0.7em;
     }
 }
 
 @media (max-width: 400px) {
-    #parallax-text {
-        font-size: 1em;
+    #img-text {
+        font-size: 2em;
     }
 
-    #parallax-text-2 {
-        font-size: 0.3em;
+    #img-text-2 {
+        font-size: 0.6em;
     }
 }
 
 @media (max-width: 300px) {
-        #parallax-text {
-        font-size: 0.7em;
+    #img-text {
+        font-size: 1.3em;
     }
 
-    #parallax-text-2 {
+    #img-text-2 {
         font-size: 0.3em;
     }
 }
 
-@media (max-width: 100px) {
-        #parallax-text {
-        font-size: 0.5em;
+@media (max-width: 250px) {
+    #img-text {
+        font-size: 0.9em;
     }
 
-    #parallax-text-2 {
+    #img-text-2 {
         font-size: 0.2em;
     }
 }
 
+@media (max-width: 150px) {
+    #img-text {
+        font-size: 0.9em;
+    }
+
+    #img-text-2 {
+        font-size: 0.1em;
+    }
+}
+
 @media (min-width: 0px) and (max-width: 100px) {
-    #parallax-text {
+    #img-text {
         font-size: 0.7em;
     }
 
-    #parallax-text-2 {
+    #img-text-2 {
         font-size: 0.2em;
     }
 }
