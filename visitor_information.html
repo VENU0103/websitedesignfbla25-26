@@ -130,8 +130,9 @@
             <img src="images/mintmuseumrandolph.jpg" alt="Mint Museum Randolph" width="400px">
         </div>
         </div><br><br>
-        <h2 class="animated-element" style="text-align: center;">Admission Prices:</h2>
-        <div class="section">
+        <h2 class="animated-element">Admission Prices and Tickets:</h2>
+        <div class="container animated-element">
+        <div class="section itemLeft">
             <div class="gallery">
                 <div class="item2 animated-element">
                     <p><strong>Mint Members</strong></p>
@@ -162,6 +163,20 @@
                     <p style="font-size: 1.5em;">FREE</p>
                 </div>
             </div>
+        </div><br><br>
+        <div class="itemRight animated-element" style="justify-content: center; margin-bottom: 30px;">
+            <fieldset class="fieldset">
+            <legend class="legend">Select Ticket Type</legend>
+                <input type="checkbox" name="ticketType" value="MintMembers">Mint Members Ticket (ID required)<br><br>
+                <input type="checkbox" name="ticketType" value="Youth">Youth (18 and under)<br><br>
+                <input type="checkbox" name="ticketType" value="Adult">Adult Ticket<br><br>
+                <input type="checkbox" name="ticketType" value="CollegeStudent">College Student Ticket (ID required)<br><br>
+                <input type="checkbox" name="ticketType" value="Teacher">Teacher Ticket (ID required)<br><br>
+                <input type="checkbox" name="ticketType" value="Senior">Senior Ticket (65+ and ID required)<br><br>
+                <input type="checkbox" name="ticketType" value="CollegeArtStudent">College Art Student Ticket (ID required)<br><br>
+                <button onclick="proceedToGetTickets()">Proceed</button>
+            </fieldset>
+        </div>
         </div>
     </body>
 </html>
