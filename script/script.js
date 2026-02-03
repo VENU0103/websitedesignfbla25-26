@@ -90,7 +90,7 @@ function proceedToGetTickets() {
     const checkboxes = document.querySelectorAll('input[name="ticketType"]');
 
     const ticketInfo = {
-        "MintMembers": { name: "Mint Members Ticket", price: 0, idRequired: true },
+        "MintMembers": { name: "Mint Members Ticket", price: 0, idRequired: false },
         "Youth": { name: "Youth Ticket (18 and under)", price: 0, idRequired: false },
         "Adult": { name: "Adult Ticket", price: 15, idRequired: false },
         "CollegeStudent": { name: "College Student Ticket", price: 10, idRequired: true },
