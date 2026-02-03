@@ -109,6 +109,8 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
     min-width: 0;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .section {
@@ -154,6 +156,92 @@ body {
 	opacity: 100;
 	transform: translateY(000px);
 	transition: opacity 1s, transform 1s;
+}
+
+.image-container {
+  width: 100%;
+  text-align: center;         /* centers image */
+  position: relative;         /* for overlay */
+}
+
+.image-container img {
+  width: 90%;
+  height: auto;
+  display: inline-block;
+}
+
+/* wrapper for text + button */
+.overlay-content {
+  position: absolute;
+  top: 50%;                  /* center vertically */
+  left: 50%;                 /* center horizontally */
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;    /* stack vertically */
+  align-items: center;
+  gap: 10px;                 /* space between text and button */
+}
+
+/* text styling */
+.text-on-image {
+  color: white;
+  font-size: 2em;
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+}
+
+/* button styling */
+.button-on-image {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #696666;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  transition: 0.3s;
+}
+
+.button-on-image:hover {
+  transform: scale(1.05);
+}
+
+.parallax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+}
+
+#img-text {
+    float: left;
+    color: white;
+    font-size: 6em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#img-text-2 {
+    float: left;
+    color: white;
+    font-size: 1em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    font-size: 2em;
+    background: #a9f1d9;
+    background-color: #a9f1d9;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    width: 100%;
 }
 
 @media (min-width: 1350px) {
@@ -229,45 +317,6 @@ body {
     }
 }
 
-.parallax {
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* vertical center */
-    justify-content: center;  /* horizontal center */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-}
-
-#img-text {
-    float: left;
-    color: white;
-    font-size: 6em;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-#img-text-2 {
-    float: left;
-    color: white;
-    font-size: 1em;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-.hamburger {
-    display: none;
-    position: fixed;
-    font-size: 2em;
-    background: #a9f1d9;
-    background-color: #a9f1d9;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-    width: 100%;
-}
-
-
 @media (max-width: 1500px) {
     #img-text {
         font-size: 4em;
@@ -303,7 +352,7 @@ body {
         flex-direction: column;
         align-items: center;
         background-color: #a9f1d9;
-        padding-top: 70px;
+        padding-top: 100px;
     }
 
     .main_heading.show {
@@ -349,6 +398,15 @@ body {
     #img-text-2 {
         font-size: 0.7em;
     }
+
+    .text-on-image {
+        font-size: 1.5em;
+    }
+
+    .button-on-image {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -358,6 +416,15 @@ body {
 
     #img-text-2 {
         font-size: 0.6em;
+    }
+
+    .text-on-image {
+        font-size: 1.2em;
+    }
+
+    .button-on-image {
+        font-size: 0.8em;
+        padding: 6px 12px;
     }
 }
 
@@ -369,6 +436,15 @@ body {
     #img-text-2 {
         font-size: 0.3em;
     }
+
+    .text-on-image {
+        font-size: 1em;
+    }
+
+    .button-on-image {
+        font-size: 0.7em;
+        padding: 5px 10px;
+    }
 }
 
 @media (max-width: 250px) {
@@ -378,6 +454,15 @@ body {
 
     #img-text-2 {
         font-size: 0.2em;
+    }
+
+    .text-on-image {
+        font-size: 0.8em;
+    }
+
+    .button-on-image {
+        font-size: 0.6em;
+        padding: 4px 8px;
     }
 }
 
@@ -389,6 +474,15 @@ body {
     #img-text-2 {
         font-size: 0.1em;
     }
+
+    .text-on-image {
+        font-size: 0.7em;
+    }
+
+    .button-on-image {
+        font-size: 0.5em;
+        padding: 3px 6px;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 100px) {
@@ -398,5 +492,14 @@ body {
 
     #img-text-2 {
         font-size: 0.2em;
+    }
+
+    .text-on-image {
+        font-size: 0.6em;
+    }
+
+    .button-on-image {
+        font-size: 0.4em;
+        padding: 2px 4px;
     }
 }
