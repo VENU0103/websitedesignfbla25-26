@@ -355,6 +355,8 @@ body {
 
     .content_page_heading.show {
         display: flex;
+        align-items: center;
+        padding-left: 0;
     }
 
     .button {

@@ -357,6 +357,8 @@ body {
 
     .main_heading.show {
         display: flex;
+        align-items: center;
+        padding-left: 0;
     }
 
     .button {
