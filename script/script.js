@@ -166,12 +166,12 @@ function proceedToGetTickets() {
 }
 
 function BecomeMember() {
-    const membership = prompt("Which membership do you want?\n\n- Contributor Membership for $60/year\n- Supporter Membership for $100/year\n- Signature Membership for $250/year\n- Champion Membership for $500/year");
+    const membership = prompt("Which membership do you want?\n\n- Contributor Membership for $60/year\n- Supporter Membership for $100/year\n- Signature Membership for $250/year\n- Champion Membership for $500/year\n\nType 'Contributor', 'Supporter', 'Signature', or 'Champion' to select a membership (case does not matter).");
     if (membership === null) return;
 
     const validMemberships = ["Contributor", "Supporter", "Signature", "Champion"].map(m => m.toLowerCase());
     if (!validMemberships.includes(membership.toLowerCase())) {
-        alert("Invalid membership selection. Please enter a valid membership type or click 'Cancel' if you don't want to become a member.");
+        alert("Invalid membership selection. Please enter 'Contributor', 'Supporter', 'Signature', or 'Champion'. If you don't want to become a member, click 'Cancel'.");
         return BecomeMember();
     }
 
