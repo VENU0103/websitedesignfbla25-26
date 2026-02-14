@@ -60,9 +60,9 @@ body {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1700px) {
     #text {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -79,5 +79,22 @@ body {
         margin-right: 0;
         align-self: flex-start;
         font-size: small;
+    }
+}
+
+@media (max-width: 1400px) {
+    #text {
+        font-size: 15px;
+    }
+
+    .container img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1380px) {
+    #text {
+        font-size: 12px;
     }
 }
