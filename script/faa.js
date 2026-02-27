@@ -113,7 +113,7 @@ const pages = {
   8: {
     title: "Carnival Scene - George Benjamin Luks",
     image: "images/carnivalscene.png",
-    text: "Like other members of the Ashcan School, George Luks became well known for painting the people and streets of lower Manhattan. Of the group, he was probably the one who portrayed these subjects in the roughest and most direct way. Luks had a bold, fiery personality, he drank heavily, caused trouble, and preferred depicting the tough, everyday lives of immigrants and loners rather than the wealthy. In 1918, he created Blue Devils on Fifth Avenue, a painting of French veterans marching in New York, for an exhibition supporting the Allied cause in World War I; that work is now in the Phillips Collection in Washington, D.C. The Mint Museum’s Carnival Scene, which features people wearing similar blue military uniforms along with French flags, was likely made as a companion or related piece."
+    text: "Like other members of the Ashcan School, George Luks became well known for painting the people and streets of lower Manhattan. Of the group, he was probably the one who portrayed these subjects in the roughest and most direct way. Luks had a bold, fiery personality, he drank heavily, caused trouble, and preferred depicting the tough, everyday lives of immigrants and loners rather than the wealthy. In 1918, he created Blue Devils on Fifth Avenue, a painting of French veterans marching in New York, for an exhibition supporting the Allied cause in World War I; that work is now in the Phillips Collection in Washington, D.C. The Bechtler Museum’s Carnival Scene, which features people wearing similar blue military uniforms along with French flags, was likely made as a companion or related piece."
   },
   9: {
     title: "George Washington Surrendering His Commission - Francis B. Mayer",
@@ -153,7 +153,7 @@ const pages = {
   16: {
     title: "Lotus Necklace #3 - Linda MacNeil",
     image: "images/lotusnecklace.png",
-    text: "Linda MacNeil created Lotus Necklace #3 as one of a pair of pieces in the Mint Museum’s collection that draw stylistic inspiration from the art of ancient Egypt. Much like its counterpart, Nile Midnight, this piece features a lotus flower rising from a V-shaped base, with the natural form simplified into clean, geometric shapes. MacNeil’s fascination with the plant stems from the vivid contrast between its jewel-like blossoms and the bright green pads they rest upon. Although she has incorporated glass into her jewelry designs since the late 1970s, this specific necklace was produced at the Waterford Crystal factory in Ireland while she was visiting during an artist residency held by her husband, Dan Dailey."
+    text: "Linda MacNeil created Lotus Necklace #3 as one of a pair of pieces in the Bechtler Museum’s collection that draw stylistic inspiration from the art of ancient Egypt. Much like its counterpart, Nile Midnight, this piece features a lotus flower rising from a V-shaped base, with the natural form simplified into clean, geometric shapes. MacNeil’s fascination with the plant stems from the vivid contrast between its jewel-like blossoms and the bright green pads they rest upon. Although she has incorporated glass into her jewelry designs since the late 1970s, this specific necklace was produced at the Waterford Crystal factory in Ireland while she was visiting during an artist residency held by her husband, Dan Dailey."
   },
   17: {
     title: "Royal Blue Mint Chandelier - Dale P. Chihuly",
@@ -173,7 +173,7 @@ const pages = {
   20: {
     title: "Spectral Boundary - Tom Patti",
     image: "images/spectralboundary.png",
-    text: "Tom Patti has achieved national recognition for his innovative approach to using industrial and architectural glass in his work. In Spectral Boundary, he examines the connection between the historical textile industry of North Carolina and modern industrial progress by fusing over thirty layers of glass, plastic, and woven fibers. A remarkable detail regarding this installation is that it was produced using the same high-pressure compression technology used to create the exterior of Stealth bombers, making the resulting panels resistant to both bullets and explosives. Originally situated at the Mint Museum of Craft + Design on North Tryon Street, the piece has since been redesigned and moved to a new location."
+    text: "Tom Patti has achieved national recognition for his innovative approach to using industrial and architectural glass in his work. In Spectral Boundary, he examines the connection between the historical textile industry of North Carolina and modern industrial progress by fusing over thirty layers of glass, plastic, and woven fibers. A remarkable detail regarding this installation is that it was produced using the same high-pressure compression technology used to create the exterior of Stealth bombers, making the resulting panels resistant to both bullets and explosives. Originally situated at the Bechtler Museum of Craft + Design on North Tryon Street, the piece has since been redesigned and moved to a new location."
   },
   21: {
     title: "A Man - Cornelius J. van der Ceulen",
@@ -183,12 +183,12 @@ const pages = {
   22: {
     title: "Untitled (Figures and Record Player) - Eva Pennink",
     image: "images/untitled1.png",
-    text: "After making a name for herself as a prominent fashion photographer and model during the 1930s, Eva Pennink shifted her creative focus to collage in her later years. Her work is characterized by a playful and witty blend of classical art history and modern cultural references, using unexpected pairings to spark both humor and reflection. In 1975, her contributions to the medium were officially recognized when The Mint Museum hosted the first-ever museum exhibition dedicated to her collage work."
+    text: "After making a name for herself as a prominent fashion photographer and model during the 1930s, Eva Pennink shifted her creative focus to collage in her later years. Her work is characterized by a playful and witty blend of classical art history and modern cultural references, using unexpected pairings to spark both humor and reflection. In 1975, her contributions to the medium were officially recognized when The Bechtler Museum hosted the first-ever museum exhibition dedicated to her collage work."
   },
   23: {
     title: "Untitled (Trees, Angel, Dancer) - Eva Pennink",
     image: "images/untitled2.png",
-    text: "After establishing herself as a prominent fashion photographer and model in the 1930s, Eva Pennink transitioned to collage as her main artistic outlet later in life. She developed a style that playfully merged elements of art history with modern culture, creating unexpected pairings that were both witty and intellectually engaging. Her work in this medium gained formal museum recognition in 1975 when the Mint Museum organized the first solo exhibition of her collages."
+    text: "After establishing herself as a prominent fashion photographer and model in the 1930s, Eva Pennink transitioned to collage as her main artistic outlet later in life. She developed a style that playfully merged elements of art history with modern culture, creating unexpected pairings that were both witty and intellectually engaging. Her work in this medium gained formal museum recognition in 1975 when the Bechtler Museum organized the first solo exhibition of her collages."
   },
   24: {
     title: "Rest on the Flight Into Egypt - Francesco Zuccarelli",
@@ -323,7 +323,7 @@ const pages = {
   50: {
     title: "“Southern Pines” Vase - Newcomb Pottery, Anna F. Simpson, Joseph Meyer",
     image: "images/southernpinesvase.png",
-    text: "The Newcomb and Rookwood potteries served as prime examples of the American Arts and Crafts Movement through their commitment to craftsmanship, hand-painted decorations, and simple forms. Both firms employed decorators who drew inspiration from popular styles in the fine arts world, most notably Tonalism during the early 20th century. The artists who decorated the vases in this collection were clearly influenced by this movement, as each piece features a design inspired by the hushed colors and suffused light characteristic of Tonalist paintings. Visitors interested in seeing more examples of American ceramics from the Arts and Crafts period can visit the Mint Museum Randolph."
+    text: "The Newcomb and Rookwood potteries served as prime examples of the American Arts and Crafts Movement through their commitment to craftsmanship, hand-painted decorations, and simple forms. Both firms employed decorators who drew inspiration from popular styles in the fine arts world, most notably Tonalism during the early 20th century. The artists who decorated the vases in this collection were clearly influenced by this movement, as each piece features a design inspired by the hushed colors and suffused light characteristic of Tonalist paintings. Visitors interested in seeing more examples of American ceramics from the Arts and Crafts period can visit the Bechtler Museum"
   }
 };
 
